@@ -1,5 +1,18 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<header style="background-color: black; color: white; text-align: center; width: 100%">
+  <h1>Lab 1</h1>
+</header>
 
+<nav>
+
+  <!-- <a href="">About</a> -->
+  {{#link-to "reddit"}}
+  Reddit API Render
+  {{/link-to}}
+
+
+</nav>
 {{outlet}}
+
+<footer style="background-color: black; color: white; text-align: center;  bottom: 0px; width: 100%">
+<p>&copy; Susan Zheng</p>
+</footer>

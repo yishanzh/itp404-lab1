@@ -1,0 +1,14 @@
+{{#each searchResults}}
+<div>
+  <h5>{{this.data.title}}</h5>
+  <p>score: {{this.data.score}}</p>
+  <p>subscribers: {{formatNumber this.data.subreddit_subscribers}}</p>
+  {{#if this.data.num_comments}}
+  <p>comments: {{formatNumber this.data.num_comments}}</p>
+  {{else}}
+  <p>No comment.</p>
+  {{/if}}
+</div>
+{{/each}}
+
+{{outlet}}
