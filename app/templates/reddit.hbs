@@ -1,14 +1,6 @@
-{{#each searchResults}}
-<div>
-  <h5>{{this.data.title}}</h5>
-  <p>score: {{this.data.score}}</p>
-  <p>subscribers: {{formatNumber this.data.subreddit_subscribers}}</p>
-  {{#if this.data.num_comments}}
-  <p>comments: {{formatNumber this.data.num_comments}}</p>
-  {{else}}
-  <p>No comment.</p>
-  {{/if}}
-</div>
+{{#each model.data.children as |result|}}
+<h3>{{result.data.title}}</h3>
+<p>domain: {{result.data.domain}}</p>
+<p>ups: {{result.data.ups}} downs: {{result.data.downs}}</p>
+<p>comments: {{result.data.num_comments}}</p>
 {{/each}}
-
-{{outlet}}
